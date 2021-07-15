@@ -1,0 +1,223 @@
+//Primary
+
+$Blue: hsl(223, 87%, 63%);
+
+//Secondary
+
+$Pale-Blue: hsl(223, 100%, 88%);
+$Light-Red: hsl(354, 100%, 66%);
+
+//Neutral
+
+$Gray: hsl(0, 0%, 59%);
+$VDark-Blue: hsl(209, 33%, 12%);
+
+//font
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem 3rem;
+}
+
+.header {
+  text-align: center;
+  .logo__img {
+    padding-bottom: 2rem;
+    width: 4rem;
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: $Gray;
+    span {
+      font-weight: bold;
+      color: #000;
+    }
+    padding-bottom: 2rem;
+  }
+  &__subtitle {
+    font-size: 14px;
+    padding-bottom: 3rem;
+    color: $VDark-Blue;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .email-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem 2rem;
+    border: 1px solid $Pale-Blue;
+    color: $VDark-Blue;
+    border-radius: 2rem;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+    outline: none;
+
+    &::placeholder {
+      color: $Pale-Blue;
+    }
+  }
+  .cta {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: $Blue;
+    color: #fff;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Libre Franklin";
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 5px 6px 0px hsla(223, 91%, 79%, 0.507);
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+  i {
+    color: red;
+    font-size: 12px;
+    padding-bottom: 1rem;
+
+    display: none;
+  }
+}
+
+.app-img {
+  width: 115%;
+  padding: 3rem 0 3rem;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__links {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__link {
+    margin: 5px;
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $Blue;
+      border: 1px solid $Pale-Blue;
+      border-radius: 50%;
+      padding: 0.6rem;
+    }
+  }
+}
+
+.copy-write {
+  color: $Gray;
+  text-align: center;
+  font-size: 14px;
+  padding: 0 1rem;
+}
+
+@media (min-width: 650px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    width: 640px;
+    height: 1024px;
+  }
+  .header {
+    text-align: center;
+
+    &__title {
+      font-weight: 300;
+      font-size: 2rem;
+      color: $Gray;
+      span {
+        font-weight: bold;
+        color: #000;
+      }
+      padding-bottom: 0.5rem;
+    }
+    &__subtitle {
+      font-size: 14px;
+      padding-bottom: 3rem;
+      color: $VDark-Blue;
+    }
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+
+    .email-box {
+      flex: 2;
+      margin: 0 10px 0 0;
+    }
+    .cta {
+      flex: 1;
+    }
+    i {
+      color: red;
+      font-size: 12px;
+      padding-bottom: 1rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translate(20px, 40px);
+      display: none;
+    }
+  }
+
+  .app-img {
+    width: 100%;
+    padding: 3rem 0 3rem;
+  }
+}
