@@ -162,62 +162,63 @@ main {
 }
 
 @media (min-width: 650px) {
-  body {
-    height: 100vh;
-  }
   main {
-    width: 640px;
+    width: 800px;
     height: 1024px;
   }
   .header {
     text-align: center;
 
+    .logo__img {
+      width: 100px;
+    }
+
     &__title {
       font-weight: 300;
-      font-size: 2rem;
-      color: $Gray;
-      span {
-        font-weight: bold;
-        color: #000;
-      }
+      font-size: 3rem;
       padding-bottom: 0.5rem;
     }
     &__subtitle {
-      font-size: 14px;
-      padding-bottom: 3rem;
-      color: $VDark-Blue;
+      font-size: 20px;
     }
   }
 
   .form {
     width: 100%;
-    display: flex;
-    align-items: center;
+
     flex-direction: row;
-    justify-content: center;
+
     position: relative;
 
     .email-box {
-      flex: 2;
+      max-width: 400px;
       margin: 0 10px 0 0;
+      &::placeholder {
+        font-size: 18px;
+      }
     }
     .cta {
-      flex: 1;
+      max-width: 200px;
     }
     i {
-      color: red;
-      font-size: 12px;
-      padding-bottom: 1rem;
+      font-size: 15px;
       position: absolute;
       left: 0;
       bottom: 0;
-      transform: translate(20px, 40px);
-      display: none;
+      transform: translate(70px, 40px);
     }
   }
 
   .app-img {
     width: 100%;
     padding: 3rem 0 3rem;
+  }
+
+  .social__link {
+    svg {
+      width: 30px;
+      height: 30px;
+      padding: 0.4rem;
+    }
   }
 }
